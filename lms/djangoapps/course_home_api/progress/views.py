@@ -256,7 +256,7 @@ class ProgressTabView(RetrieveAPIView):
             'has_scheduled_content': has_scheduled_content,
             'section_scores': list(course_grade.chapter_grades.values()),
             'studio_url': get_studio_url(course, 'settings/grading'),
-            'username': username,
+            'username': "TEST123",
             'user_has_passing_grade': user_has_passing_grade,
             'verification_data': verification_data,
         }

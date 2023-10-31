@@ -54,7 +54,7 @@ class CourseGradeFactory:
             collected_block_structure=None,
             course_structure=None,
             course_key=None,
-            force_update_subsections=False,
+            force_update_subsections=True,
     ):
         """
         Computes, updates, and returns the CourseGrade for the given

@@ -44,6 +44,7 @@ class CourseGradeFactory:
         try:
             return self._read(user, course_data)
         except PersistentCourseGrade.DoesNotExist:
+            print("-------------------ERROR IN GRADING----------------------")
             return self._create_zero(user, course_data)
 
     def update(

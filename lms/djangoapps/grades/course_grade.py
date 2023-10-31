@@ -40,7 +40,7 @@ class CourseGradeBase:
 
         # Convert empty strings to None when reading from the table
         self.letter_grade = letter_grade or None
-        self.force_update_subsections = force_update_subsections
+        self.force_update_subsections = True
 
         self.last_updated = last_updated
 

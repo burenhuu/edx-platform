@@ -241,6 +241,8 @@ class ProgressTabView(RetrieveAPIView):
         }
 
         access_expiration = get_access_expiration_data(request.user, course_overview)
+        print("---------------------------------START GRADING LOG -----------------------------------")
+        print(list(course_grade.chapter_grades.values()))
 
         data = {
             'access_expiration': access_expiration,

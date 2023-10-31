@@ -39,6 +39,7 @@ class CourseGradeFactory:
         At least one of course, collected_block_structure, course_structure,
         or course_key should be provided.
         """
+        print("-------------------READING COURSE GRADE FACTORY----------------------")
         course_data = CourseData(user, course, collected_block_structure, course_structure, course_key)
         try:
             return self._read(user, course_data)

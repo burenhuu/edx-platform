@@ -50,7 +50,7 @@ class CourseGradeFactory:
                 return self._update(user, course_data, send_course_grade_signals=send_course_grade_signals)
             else:
                 print("-------------------ERROR IN GRADING CREATE ZERO----------------------")
-                return return self._create_zero(user, course_data)
+                return self._create_zero(user, course_data)
 
     def update(
             self,

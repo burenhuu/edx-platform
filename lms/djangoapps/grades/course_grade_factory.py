@@ -47,7 +47,7 @@ class CourseGradeFactory:
             print("-------------------ERROR IN GRADING----------------------")
             if create_if_needed:
                 print("-------------------ERROR IN GRADING CREATE IF NEEDED----------------------")
-                return self._update(user, course_data, send_course_grade_signals=send_course_grade_signals)
+                return self._update(user, course_data)
             else:
                 print("-------------------ERROR IN GRADING CREATE ZERO----------------------")
                 return self._create_zero(user, course_data)
@@ -155,7 +155,7 @@ class CourseGradeFactory:
         )
 
     @staticmethod
-    def _update(user, course_data, force_update_subsections=False):
+    def _update(user, course_data, force_update_subsections=True):
         """
         Computes, saves, and returns a CourseGrade object for the
         given user and course.

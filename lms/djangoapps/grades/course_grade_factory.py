@@ -45,14 +45,12 @@ class CourseGradeFactory:
             return self._read(user, course_data)
         except PersistentCourseGrade.DoesNotExist:
             print("-------------------ERROR IN GRADING----------------------")
-            if assume_zero_if_absent(course_data.course_key):
-                print("-------------------ERROR IN GRADING CREATE ZERO----------------------")
-                return self._create_zero(user, course_data)
-            elif create_if_needed:
+            if create_if_needed:
                 print("-------------------ERROR IN GRADING CREATE IF NEEDED----------------------")
                 return self._update(user, course_data, send_course_grade_signals=send_course_grade_signals)
             else:
-                return None
+                print("-------------------ERROR IN GRADING CREATE ZERO----------------------")
+                return return self._create_zero(user, course_data)
 
     def update(
             self,

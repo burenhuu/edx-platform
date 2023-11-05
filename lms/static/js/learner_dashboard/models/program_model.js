@@ -6,13 +6,14 @@ import Backbone from 'backbone';
 class ProgramModel extends Backbone.Model {
   initialize(data) {
     if (data) {
+      console.log(data);
       this.set({
         title: data.title,
         type: data.type,
         subtitle: data.subtitle,
         authoring_organizations: data.authoring_organizations,
         detailUrl: data.detail_url,
-        bannerImageUrl: data.banner_image_url,
+        ioBannerImageUrl: data.banner_image_url,
         xsmallBannerUrl: (data.banner_image && data.banner_image['x-small']) ? data.banner_image['x-small'].url : '',
         smallBannerUrl: (data.banner_image && data.banner_image.small) ? data.banner_image.small.url : '',
         mediumBannerUrl: (data.banner_image && data.banner_image.medium) ? data.banner_image.medium.url : '',

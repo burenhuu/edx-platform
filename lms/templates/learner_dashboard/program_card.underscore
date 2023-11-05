@@ -53,11 +53,11 @@
 <a href="<%- detailUrl %>" class="card-link">
     <div class="banner-image-container">
         <picture>
-            <source srcset="<%- bannerImageUrl %>" media="(max-width: <%- breakpoints.max.xsmall %>)">
-            <source srcset="<%- bannerImageUrl %>" media="(max-width: <%- breakpoints.max.small %>)">
-            <source srcset="<%- bannerImageUrl %>" media="(max-width: <%- breakpoints.max.medium %>)">
-            <source srcset="<%- bannerImageUrl %>" media="(max-width: <%- breakpoints.max.large %>)">
-            <img class="banner-image" srcset="<%- bannerImageUrl %>" alt="<%- interpolate(gettext('%(programName)s Home Page.'), {programName: title}, true)%>">
+            <source src="<%- ioBannerImageUrl %>" media="(max-width: <%- breakpoints.max.xsmall %>)">
+            <source src="<%- ioBannerImageUrl %>" media="(max-width: <%- breakpoints.max.small %>)">
+            <source src="<%- ioBannerImageUrl %>" media="(max-width: <%- breakpoints.max.medium %>)">
+            <source src="<%- ioBannerImageUrl %>" media="(max-width: <%- breakpoints.max.large %>)">
+            <img class="banner-image" src="<%- ioBannerImageUrl %>" alt="<%- interpolate(gettext('%(programName)s Home Page.'), {programName: title}, true)%>">
         </picture>
     </div>
 </a>

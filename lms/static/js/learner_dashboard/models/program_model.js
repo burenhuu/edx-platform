@@ -4,8 +4,8 @@ import Backbone from 'backbone';
  * Model for Course Programs.
  */
 class ProgramModel extends Backbone.Model {
-  console.log(data);
   initialize(data) {
+      console.log(data);
     if (data) {
       this.set({
         title: data.title,
